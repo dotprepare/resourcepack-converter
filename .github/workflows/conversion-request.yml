@@ -99,11 +99,12 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get install -y moreutils zip
-          yarn global add spritesheet-js
+          npm install -g spritesheet-js
           sudo apt-get install -y imagemagick
           pip install Pillow
           pip install requests
           pip install jproperties
+          sudo apt-get install jq -y
       - name: Convert Pack
         id: convert-pack
         continue-on-error: false
